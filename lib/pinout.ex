@@ -1,5 +1,6 @@
 defmodule Pinout do
   @moduledoc """
+  Pinout detects popular embedded devices and prints out pinout diagrams.
   """
 
   alias Pinout.Detector
