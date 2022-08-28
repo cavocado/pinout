@@ -3,10 +3,7 @@
 [![CircleCI](https://circleci.com/gh/cavocado/pinout.svg?style=svg)](https://circleci.com/gh/cavocado/pinout)
 [![Hex version](https://img.shields.io/hexpm/v/pinout.svg "Hex version")](https://hex.pm/packages/pinout)
 
-Pinout detects popular embedded devices and prints out pinout diagrams like
-this:
-
-TODO
+Pinout detects popular embedded devices and prints out pinout diagrams.
 
 ## Usage
 
