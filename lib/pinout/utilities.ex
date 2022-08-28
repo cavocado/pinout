@@ -23,7 +23,7 @@ defmodule Pinout.Utilities do
     String.duplicate(" ", half_spaces) <> string <> String.duplicate(" ", spaces - half_spaces)
   end
 
-  @spec change_color(atom()) :: IO.ANSI.ansicode()
+  @spec change_color(Pinout.Board.pin_type()) :: IO.ANSI.ansicode()
   def change_color(:gnd), do: :black
   def change_color(:p5v), do: :red
   def change_color(:p3v3), do: :yellow
