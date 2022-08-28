@@ -19,12 +19,14 @@ defmodule Pinout.PinTable do
 
   defp header(len, [_, _]) do
     [
-      :white_background,
-      :black,
+      :white,
       Utilities.justify(len + 8, "p9/p1", :right),
       Utilities.justify(len + 4, "", :left),
+      :light_black,
       "|",
+      :white,
       Utilities.justify(len + 9, "p8/p2", :right),
+      Utilities.justify(len + 4, "", :left),
       "\n"
     ]
   end
@@ -43,7 +45,11 @@ defmodule Pinout.PinTable do
   end
 
   defp pins(len, [[pin1, pin2 | rest]], output) do
-    new_output = [output, make_pair(len, pin1, pin2), "\n"]
+    new_output = [
+      output,
+      make_pair(len, pin1, pin2),
+      "\n"
+    ]
 
     pins(len, [rest], new_output)
   end
@@ -57,7 +63,7 @@ defmodule Pinout.PinTable do
     new_output = [
       output,
       make_pair(len, pin1_p9, pin2_p9),
-      :black,
+      :light_black,
       " | ",
       make_pair(len, pin1_p8, pin2_p8),
       "\n"
@@ -68,10 +74,9 @@ defmodule Pinout.PinTable do
 
   defp make_pair(len, {num, type, text}, {num2, type2, text2}) do
     [
-      :white_background,
       Utilities.change_color(type),
       Utilities.justify(len, text, :right),
-      :black,
+      :light_black,
       Utilities.justify(5, "[#{num}]", :right),
       " ",
       Utilities.justify(5, "[#{num2}]", :left),
