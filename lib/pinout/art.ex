@@ -117,6 +117,23 @@ defmodule Pinout.Art do
        |                                          |
        ╰------------------------------------------╯
        """, 34},
+    t_cobbler22:
+      {"""
+       ╭-----------------------╮
+       |     ooooooooooooo     |
+       |     ooooooooooooo     |
+       |XXXXXXXXXXXXXXXXXXXXXXX|
+       ╰-------╮ 1   o ╭-------╯
+               | o   o |
+               | o   o |
+               | o   o |
+               | o   o |
+               | o   o |
+               | o   o |
+               | o   o | R1 Raspberry Pi Revision: 1
+               | o   o | R2 Raspberry Pi Revision: 2
+               ╰-------╯
+       """, 23},
     unknown: {"XXXXXXXXXXXXX", 13}
   }
 

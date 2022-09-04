@@ -353,6 +353,28 @@ defmodule Pinout.DB.Connectors do
           {40, :gnd, "ENET2 TXEN"}
         ]
       ],
+      t_cobbler22: [
+        [
+          {1, :spi, "GPIO 7/SPI0 CE1"},
+          {2, :gpio, "GPIO 17"},
+          {3, :spi, "GPIO 8/SPI0 CE0"},
+          {4, :gpio, "GPIO 18"},
+          {5, :spi, "GPIO 11/SPI0 SCLK"},
+          {6, :gpio, "GPIO R1:21, R2:27"},
+          {7, :spi, "GPIO 9/SPI0 MISO"},
+          {8, :gpio, "GPIO 22"},
+          {9, :spi, "GPIO 10/SPI0 MOSI"},
+          {10, :gpio, "GPIO 23"},
+          {11, :uart, "GPIO 15/UART RX"},
+          {12, :gpio, "GPIO 24"},
+          {13, :uart, "GPIO 14/UART TX"},
+          {14, :gpio, "GPIO 25"},
+          {15, :i2c, "GPIO R1:1, R2:3/EEPROM SCL"},
+          {16, :gpio, "GPIO 4"},
+          {17, :i2c, "GPIO R1:0, R2:2/EEPROM SDA"},
+          {18, :gnd, "Ground"},
+          ]
+        ],
       unknown: []
     }
   end

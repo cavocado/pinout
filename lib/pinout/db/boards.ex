@@ -94,6 +94,12 @@ defmodule Pinout.DB.Boards do
         connectors_key: :bb,
         board_name: "BeagleBone Black"
       },
+      %Pinout.Board{
+        model_name: "Raspberry Pi T-Cobbler",
+        art_template: :t_cobbler22,
+        connectors_key: :t_cobbler22,
+        board_name: "Raspberry Pi T-Cobbler"
+      },
       # Check
       %Pinout.Board{
         model_name: "TI AM335x BeagleBone Blue",
