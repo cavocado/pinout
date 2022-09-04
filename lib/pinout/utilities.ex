@@ -34,4 +34,5 @@ defmodule Pinout.Utilities do
   def change_color(:spi), do: :light_magenta
   def change_color(:pwm), do: :light_green
   def change_color(:ain), do: :light_blue
+  def change_color(:other), do: :light_red
 end
