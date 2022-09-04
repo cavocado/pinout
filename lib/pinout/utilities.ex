@@ -24,7 +24,7 @@ defmodule Pinout.Utilities do
   end
 
   @spec change_color(Pinout.Board.pin_type()) :: IO.ANSI.ansicode()
-  def change_color(:gnd), do: :light_black
+  def change_color(:ground), do: :light_black
   def change_color(:p5v), do: :red
   def change_color(:p3v3), do: :yellow
   def change_color(:gpio), do: :green
