@@ -372,9 +372,9 @@ defmodule Pinout.DB.Connectors do
           {15, :i2c, "GPIO R1:1, R2:3/EEPROM SCL"},
           {16, :gpio, "GPIO 4"},
           {17, :i2c, "GPIO R1:0, R2:2/EEPROM SDA"},
-          {18, :gnd, "Ground"},
-          ]
-        ],
+          {18, :ground, "Ground"}
+        ]
+      ],
       unknown: []
     }
   end

@@ -105,7 +105,7 @@ defmodule Pinout do
       "Raspberry Pi Zero 2 W", "Raspberry Pi Zero W", "PocketBeagle",
       "Raspberry Pi 400", "NPi i.MX6 ULL", "MangoPi MQ-Pro", "GRiSP2",
       "BeagleBone Green Wireless", "BeagleBone Black Wireless", "BeagleBone Black",
-      "BeagleBone Blue"]
+      "Raspberry Pi T-Cobbler", "BeagleBone Blue"]
 
   """
   @spec known_boards() :: [String.t()]
