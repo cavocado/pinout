@@ -101,16 +101,17 @@ defmodule Pinout do
   ## Examples
 
       iex> Pinout.known_boards()
-      ["Raspberry Pi 3B", "Raspberry Pi 4B", "Raspberry Pi 2B",
-      "Raspberry Pi Zero 2 W", "Raspberry Pi Zero W", "PocketBeagle",
-      "Raspberry Pi 400", "NPi i.MX6 ULL", "MangoPi MQ-Pro", "GRiSP2",
-      "BeagleBone Green Wireless", "BeagleBone Black Wireless", "BeagleBone Black",
-      "Raspberry Pi T-Cobbler", "BeagleBone Blue"]
+      ["BeagleBone Black", "BeagleBone Black Wireless", "BeagleBone Blue",
+      "BeagleBone Green Wireless", "GRiSP2", "MangoPi MQ-Pro", "NPi i.MX6 ULL",
+      "PocketBeagle", "Raspberry Pi 2B", "Raspberry Pi 3B", "Raspberry Pi 400",
+      "Raspberry Pi 4B", "Raspberry Pi T-Cobbler", "Raspberry Pi Zero 2 W",
+      "Raspberry Pi Zero W"]
 
   """
   @spec known_boards() :: [String.t()]
   def known_boards() do
     DB.get_board_names()
+    |> Enum.sort()
   end
 
   @doc """
