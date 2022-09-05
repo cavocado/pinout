@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.2
+
+* Updates
+  * Added Raspberry Pi T-Cobbler (Thanks @dkuku)
+
 ## v0.1.1
 
 * Updates
