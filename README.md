@@ -23,8 +23,10 @@ Build and then run `Pinout.print()` at the IEx prompt.
 
 To add support for a new board, do the following:
 
-1. Copy `/sys/firmware/devicetree/model` off the new board and add it under the
-   `test/fixtures` directory like other boards.
+1. Copy `/sys/firmware/devicetree/base` directory off the new board and add it
+   under the `test/fixture` directory like other boards.
+   a. This can be accomplished with a command like
+      `scp -R nerves.local:/sys/firmware/devicetree/base .`
 2. Find a board in `lib/pinout/db/boards.ex` that's similar to the new one and
    use it as a template for the new board.
 3. If the new board has a new pinout, add the pinout information to
