@@ -19,6 +19,18 @@ end
 
 Build and then run `Pinout.print()` at the IEx prompt.
 
+## Nerves + Livebook
+
+[Nerves Livebook project](https://github.com/nerves-livebook/nerves_livebook)
+allows you to try out the Nerves project on real hardware without needing
+to build a project from scratch.
+
+Within minutes, you'll have a Raspberry Pi or Beaglebone running Nerves. You'll
+be able to run code in [Livebook](https://livebook.dev/) and work through
+Nerves tutorials from the comfort of your browser.
+
+[![Run in Livebook](https://livebook.dev/badge/v1/blue.svg)](https://livebook.dev/run?url=https%3A%2F%2Fgithub.com%2Fcavocado%2Fpinout%2Fblob%2Fmain%2Fnotebooks%2Fbasics.livemd)
+
 ## Adding new boards
 
 To add support for a new board, do the following:

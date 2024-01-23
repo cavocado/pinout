@@ -1,0 +1,170 @@
+<!-- livebook:{"persist_outputs":true} -->
+
+# Hello Pinout
+
+```elixir
+Mix.install([
+  {:pinout, "~> 0.1.3"},
+  {:kino, "~> 0.12.2"}
+])
+```
+
+## Introduction
+
+The [Pinout library](https://hex.pm/packages/pinout) detects popular embedded
+devices and prints out [pinout diagrams](https://en.wikipedia.org/wiki/Pinout).
+In this exercise, we will learn a few useful functions that the Pinout library
+provides.
+
+## Detecting your device
+
+`Pinout.detect/0` returns the name of the current board. When the Pinout
+library does not know about your board, the string `"Unknown Board"` is
+returned.
+
+```elixir
+Pinout.detect()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+"Raspberry Pi Zero W"
+```
+
+## Printing the pinout for your board
+
+`Pinout.print/0` prints the pinout diagram for the current board.
+
+```elixir
+Pinout.print()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+╭------------------------╮
+|  oooooooooooooooooooo  |
+|  1ooooooooooooooooooo  |
+|  Raspberry Pi Zero W   |
+|  ╭---╮     ╭--╮  ╭--╮  |
+╰--╰---╯-----╰--╯--╰--╯--╯
+        3v3 Power  [1] [2]  5v Power
+  GPIO 2/I2C1 SDA  [3] [4]  5v Power
+  GPIO 3/I2C1 SCL  [5] [6]  Ground
+    GPIO 4/GPCLK0  [7] [8]  GPIO 14/UART TX
+           Ground  [9] [10] GPIO 15/UART RX
+          GPIO 17 [11] [12] GPIO 18/PCM CLK
+          GPIO 27 [13] [14] Ground
+          GPIO 22 [15] [16] GPIO 23
+        3v3 Power [17] [18] GPIO 24
+GPIO 10/SPI0 MOSI [19] [20] Ground
+ GPIO 9/SPI0 MISO [21] [22] GPIO 25
+GPIO 11/SPI0 SCLK [23] [24] GPIO 8/SPI0 CE0
+           Ground [25] [26] GPIO 7/SPI0 CE1
+GPIO 0/EEPROM SDA [27] [28] GPIO 1/EEPROM SCL
+           GPIO 5 [29] [30] Ground
+           GPIO 6 [31] [32] GPIO 12/PWM0
+     GPIO 13/PWN1 [33] [34] Ground
+   GPIO 19/PCM FS [35] [36] GPIO 16
+          GPIO 26 [37] [38] GPIO 20/PCM DIN
+           Ground [39] [40] GPIO 21/PCM DOUT
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+## Checking other boards
+
+Here is a list of boards that are currently known to the Pinout library.
+
+```elixir
+Pinout.known_boards() |> Enum.map(&"- #{&1}\n") |> Kino.Markdown.new()
+```
+
+Using these board names as identifiers, we can print the pinout for any of them
+regardless of your current board.
+
+```elixir
+Pinout.print("Raspberry Pi 4B")
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+╭----------------------------------╮
+|  oooooooooooooooooooo       ╭-----╮
+|  1ooooooooooooooooooo       |     |
+|                             ╰-----╯
+|                             ╭-----╮
+|       Raspberry Pi 4B       |     |
+|                             ╰-----╯
+|                           ╭-------╮
+|          ╭------╮         |       |
+|  ╭--╮    |      |         ╰-------╯
+╰--╰--╯----╰------╯-----------------╯
+        3v3 Power  [1] [2]  5v Power
+  GPIO 2/I2C1 SDA  [3] [4]  5v Power
+  GPIO 3/I2C1 SCL  [5] [6]  Ground
+    GPIO 4/GPCLK0  [7] [8]  GPIO 14/UART TX
+           Ground  [9] [10] GPIO 15/UART RX
+          GPIO 17 [11] [12] GPIO 18/PCM CLK
+          GPIO 27 [13] [14] Ground
+          GPIO 22 [15] [16] GPIO 23
+        3v3 Power [17] [18] GPIO 24
+GPIO 10/SPI0 MOSI [19] [20] Ground
+ GPIO 9/SPI0 MISO [21] [22] GPIO 25
+GPIO 11/SPI0 SCLK [23] [24] GPIO 8/SPI0 CE0
+           Ground [25] [26] GPIO 7/SPI0 CE1
+GPIO 0/EEPROM SDA [27] [28] GPIO 1/EEPROM SCL
+           GPIO 5 [29] [30] Ground
+           GPIO 6 [31] [32] GPIO 12/PWM0
+     GPIO 13/PWN1 [33] [34] Ground
+   GPIO 19/PCM FS [35] [36] GPIO 16
+          GPIO 26 [37] [38] GPIO 20/PCM DIN
+           Ground [39] [40] GPIO 21/PCM DOUT
+
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:ok
+```
+
+```elixir
+select = Kino.Input.select("Board", ["" | Pinout.known_boards()] |> Enum.map(&{&1, &1}))
+
+Kino.listen(select, fn %{value: board_name} ->
+  if board_name in Pinout.known_boards(), do: Pinout.print(board_name)
+end)
+
+select
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+╭-----------------------------------╮
+|   a  b  c  d  e             ╭-------╮
+|   f  g  h  i  j             |       |
+|        k  l  m              ╰-------╯
+| n o  oo                           |
+| p q  oo                           |
+|      oo                           |
+|      oo                           |
+|      oo                           |
+| r s  oo                           |
+| t u  oo                       ╭-------╮
+|      oo                       ╰-------╯
+╰-----------------------------------╯
+
+```
+
+## Adding new Boards to Pinout
+
+If you find your board unknown to the Pinout library, you can feel free to send
+a PR to add support for it!
