@@ -34,6 +34,12 @@ defmodule Pinout.DB.Boards do
         board_name: "Raspberry Pi 4B"
       },
       %Pinout.Board{
+        model_name: "Raspberry Pi 5 Model B Rev 1.0",
+        art_template: :large_rpi,
+        connectors_key: :rpi,
+        board_name: "Raspberry Pi 5B"
+      },
+      %Pinout.Board{
         model_name: "Raspberry Pi 2 Model B Rev 1.1",
         art_template: :large_rpi,
         connectors_key: :rpi,
