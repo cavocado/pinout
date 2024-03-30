@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.4
+
+* Updates
+  * Added Raspberry Pi 5B (Thanks @mnishiguchi)
+
 ## v0.1.3
 
 * Updates
