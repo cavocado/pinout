@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.5
+
+* Updates
+  * Relax board matching to not be tricked by new versions of Raspberry Pis
+
 ## v0.1.4
 
 * Updates
