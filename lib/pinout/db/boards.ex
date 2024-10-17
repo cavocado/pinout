@@ -9,7 +9,10 @@ defmodule Pinout.DB.Boards do
     board_name: @unknown_board_name
   }
 
+  @spec unknown_board_name() :: String.t()
   def unknown_board_name(), do: @unknown_board_name
+
+  @spec unknown_board() :: Pinout.Board.t()
   def unknown_board(), do: @unknown_board
 
   @spec boards() :: [Pinout.Board.t()]

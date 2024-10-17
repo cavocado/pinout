@@ -1,6 +1,7 @@
 defmodule Pinout.DB.Connectors do
   @moduledoc false
 
+  @spec connector_map() :: map()
   def connector_map() do
     %{
       rpi: [

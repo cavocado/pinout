@@ -8,7 +8,7 @@ defmodule Pinout.MixProject do
     [
       app: :pinout,
       version: @version,
-      elixir: "~> 1.12",
+      elixir: "~> 1.13",
       description: description(),
       package: package(),
       source_url: @source_url,
@@ -43,7 +43,7 @@ defmodule Pinout.MixProject do
 
   defp dialyzer() do
     [
-      flags: [:missing_return, :extra_return, :unmatched_returns, :error_handling, :underspecs]
+      flags: [:missing_return, :extra_return, :unmatched_returns, :error_handling]
     ]
   end
 

@@ -3,9 +3,9 @@ defmodule Pinout do
   Pinout detects popular embedded devices and prints out pinout diagrams.
   """
 
-  alias Pinout.Detector
-  alias Pinout.DB
   alias Pinout.Art
+  alias Pinout.DB
+  alias Pinout.Detector
   alias Pinout.PinTable
 
   @doc """
