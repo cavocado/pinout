@@ -19,43 +19,43 @@ defmodule Pinout.DB.Boards do
   def boards() do
     [
       %Pinout.Board{
-        model_name: "Raspberry Pi 3 Model B Rev 1.2",
+        model_name: "Raspberry Pi 3 Model B Rev",
         art_template: :large_rpi,
         connectors_key: :rpi,
         board_name: "Raspberry Pi 3B"
       },
       %Pinout.Board{
-        model_name: "Raspberry Pi 3 Model B Plus Rev 1.3",
+        model_name: "Raspberry Pi 3 Model B Plus Rev",
         art_template: :large_rpi,
         connectors_key: :rpi,
         board_name: "Raspberry Pi 3B+"
       },
       %Pinout.Board{
-        model_name: "Raspberry Pi 4 Model B Rev 1.1",
+        model_name: "Raspberry Pi 4 Model B Rev",
         art_template: :large_rpi,
         connectors_key: :rpi,
         board_name: "Raspberry Pi 4B"
       },
       %Pinout.Board{
-        model_name: "Raspberry Pi 5 Model B Rev 1.0",
+        model_name: "Raspberry Pi 5 Model B Rev",
         art_template: :large_rpi,
         connectors_key: :rpi,
         board_name: "Raspberry Pi 5B"
       },
       %Pinout.Board{
-        model_name: "Raspberry Pi 2 Model B Rev 1.1",
+        model_name: "Raspberry Pi 2 Model B Rev",
         art_template: :large_rpi,
         connectors_key: :rpi,
         board_name: "Raspberry Pi 2B"
       },
       %Pinout.Board{
-        model_name: "Raspberry Pi Zero 2 W Rev 1.0",
+        model_name: "Raspberry Pi Zero 2 W Rev",
         art_template: :small_rpi,
         connectors_key: :rpi,
         board_name: "Raspberry Pi Zero 2 W"
       },
       %Pinout.Board{
-        model_name: "Raspberry Pi Zero W Rev 1.1",
+        model_name: "Raspberry Pi Zero W Rev",
         art_template: :small_rpi,
         connectors_key: :rpi,
         board_name: "Raspberry Pi Zero W"
@@ -67,7 +67,7 @@ defmodule Pinout.DB.Boards do
         board_name: "PocketBeagle"
       },
       %Pinout.Board{
-        model_name: "Raspberry Pi 400 Rev 1.0",
+        model_name: "Raspberry Pi 400 Rev",
         art_template: :rpi_400,
         connectors_key: :rpi,
         board_name: "Raspberry Pi 400"

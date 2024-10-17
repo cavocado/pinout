@@ -12,7 +12,7 @@ defmodule Pinout.DB do
   @spec lookup_name_by_model(String.t()) :: String.t()
   def lookup_name_by_model(model) do
     Enum.find_value(Boards.boards(), Boards.unknown_board_name(), fn x ->
-      if x.model_name == model do
+      if model =~ x.model_name do
         x.board_name
       end
     end)

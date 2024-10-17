@@ -9,7 +9,7 @@ defmodule Pinout.Board do
   defstruct [:model_name, :art_template, :connectors_key, :board_name]
 
   @type t() :: %__MODULE__{
-          model_name: String.t(),
+          model_name: String.t() | Regex.t(),
           art_template: atom(),
           connectors_key: atom(),
           board_name: String.t()
