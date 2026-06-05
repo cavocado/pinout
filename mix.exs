@@ -15,12 +15,15 @@ defmodule Pinout.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       dialyzer: dialyzer(),
-      docs: docs(),
-      preferred_cli_env: %{docs: :docs, "hex.build": :docs, "hex.publish": :docs}
+      docs: docs()
     ]
   end
 
   def application, do: []
+
+  def cli do
+    [preferred_envs: %{docs: :docs, "hex.build": :docs, "hex.publish": :docs}]
+  end
 
   defp description do
     "Pinouts for many embedded devices"
