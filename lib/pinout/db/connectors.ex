@@ -376,6 +376,24 @@ defmodule Pinout.DB.Connectors do
           {18, :ground, "Ground"}
         ]
       ],
+      nsk: [
+        [
+          {1, :ground, "GND"},
+          {2, :p3v3, "3.3V"},
+          {3, :gpio, "PE2"},
+          {4, :gpio, "PE13"},
+          {5, :gpio, "PE3"},
+          {6, :gpio, "PE11"},
+          {7, :gpio, "PE8"},
+          {8, :gpio, "PE10"},
+          {9, :gpio, "PE9"},
+          {10, :gpio, "PE6"},
+          {11, :ground, "GND"},
+          {12, :gpio, "PE5"},
+          {13, :other, "+BATT"},
+          {14, :other, "+BATT"}
+        ]
+      ],
       unknown: []
     }
   end

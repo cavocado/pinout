@@ -84,6 +84,18 @@ defmodule Pinout.DB.Boards do
         connectors_key: :mangopi_mq_pro,
         board_name: "MangoPi MQ-Pro"
       },
+      %Pinout.Board{
+        model_name: "Goatmire Badge",
+        art_template: :goatmire_badge,
+        connectors_key: :unknown,
+        board_name: "Goatmire Badge"
+      },
+      %Pinout.Board{
+        model_name: "Nerves Starter Kit",
+        art_template: :nsk,
+        connectors_key: :nsk,
+        board_name: "Nerves Starter Kit"
+      },
       # Check
       %Pinout.Board{
         model_name: "GRiSP2",
