@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.6
+
+* Updates
+  * Add Nerves Starter Kit, Goatmire Badge, and CM5
+
 ## v0.1.5
 
 * Updates
