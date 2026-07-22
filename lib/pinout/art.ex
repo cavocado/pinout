@@ -134,6 +134,25 @@ defmodule Pinout.Art do
                | o   o | R2 Raspberry Pi Revision: 2
                ╰-------╯
        """, 23},
+    goatmire_badge:
+      {"""
+       ╭---------------------╮
+       |                     |
+       |     Name Badge      |
+       |                     |
+       ╰---------------------╯
+       """, 21},
+    nsk:
+      {"""
+       ╭--------------------------╮
+       |                          |
+       |                          |
+       |                          |
+       |         ooooooo          |
+       |         1oooooo          |
+       |                          |
+       ╰--------------------------╯
+       """, 28},
     unknown: {"XXXXXXXXXXXXX", 13}
   }
 
