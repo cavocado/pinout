@@ -105,7 +105,7 @@ defmodule Pinout do
       "BeagleBone Green Wireless", "GRiSP2", "Goatmire Badge", "MangoPi MQ-Pro",
       "NPi i.MX6 ULL", "Nerves Starter Kit", "PocketBeagle", "Raspberry Pi 2B",
       "Raspberry Pi 3B", "Raspberry Pi 3B+", "Raspberry Pi 400", "Raspberry Pi 4B",
-      "Raspberry Pi 5B", "Raspberry Pi T-Cobbler", "Raspberry Pi Zero 2 W",
+      "Raspberry Pi 5B", "Raspberry Pi CM5", "Raspberry Pi T-Cobbler", "Raspberry Pi Zero 2 W",
       "Raspberry Pi Zero W"]
 
   """
