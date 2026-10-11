@@ -1,7 +1,9 @@
 # Pinout
 
-[![CircleCI](https://circleci.com/gh/cavocado/pinout.svg?style=svg)](https://circleci.com/gh/cavocado/pinout)
 [![Hex version](https://img.shields.io/hexpm/v/pinout.svg "Hex version")](https://hex.pm/packages/pinout)
+[![API docs](https://img.shields.io/hexpm/v/pinout.svg?label=hexdocs "API docs")](https://pinout.hexdocs.pm/Pinout.html)
+[![Nerves compatibility](https://compatibility.nerves-project.org/badge/pinout.svg)](https://compatibility.nerves-project.org/packages/pinout)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/cavocado/pinout/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/cavocado/pinout/tree/main)
 
 Pinout detects popular embedded devices and prints out pinout diagrams.
 
